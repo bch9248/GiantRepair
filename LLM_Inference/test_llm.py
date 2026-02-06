@@ -9,7 +9,21 @@ import re
 import signal
 from utils.DataSet import DataSet
 
-bugs = DataSet('../d4j-info/growing_bugs_single_function.json', '../d4j-info/growing_bugs_filelist.json')
+# Use Defects4J v2.0 dataset
+bugs = DataSet('../d4j-info/single_function_repair.json', '../d4j-info/filelist.json')
+
+# Get available defects4j projects
+def get_available_d4j_projects():
+    """Get list of projects available in the current defects4j installation"""
+    try:
+        result = subprocess.run(['defects4j', 'pids'], capture_output=True, text=True, timeout=5)
+        if result.returncode == 0:
+            return set(line.strip() for line in result.stdout.strip().split('\n') if line.strip())
+    except:
+        pass
+    return set()
+
+AVAILABLE_D4J_PROJECTS = get_available_d4j_projects()
 
 def growing_bugs():
     """
@@ -23,6 +37,9 @@ def growing_bugs():
         ...
     }"""
     bugs_info_file = "./growingBugsList.xlsx"
+    if not os.path.exists(bugs_info_file):
+        # Return empty dict if Excel file doesn't exist - will load from JSON instead
+        return {}
     df = pd.read_excel(bugs_info_file)
     df = df.iloc[:, 1:]
     # print(df.columns.tolist())
@@ -143,13 +160,25 @@ def run_d4j_test(source, testmethods, bug_id, workingdir):
 
 def test_all_patches():
     plausible = 0
-    outcome = '../results/starcoderbase_growing_test/'
-    rootpath = '../results/starcoderbase_growing/' # where generated patches are stored
+    outcome = '../results/defects4j_v20_test_results/'
+    rootpath = '../results/defects4j_v20/'
     info = bugs.getBugList()
-    # print(info)
-    #projs = ["Chart", "Closure", "Time", "Math", "Lang"]
-    # projs = ["Cli","Codec","Collections","Compress","Csv","Gson","JacksonCore","JacksonDatabind","JacksonXml","Jsoup","JxPath","Mockito"]#change
+    
+    # Print available projects info
+    print(f"Available defects4j projects: {sorted(AVAILABLE_D4J_PROJECTS)}")
+    print(f"Total bugs to process: {sum(len(ids) for ids in info.values())}")
+    
+    skipped_projects = set()
+    processed = 0
+    
     for key in info:
+        # Check if project is supported
+        if key not in AVAILABLE_D4J_PROJECTS:
+            if key not in skipped_projects:
+                skipped_projects.add(key)
+                print(f"SKIP: Project '{key}' not available in defects4j")
+            continue
+        
         ids = info[key]
         for idnum in ids:
             # if key not in projs:
@@ -161,17 +190,33 @@ def test_all_patches():
             print("{}_{}".format(key, idnum))
 
             subprocess.run("rm -rf ./tmp/defects4j_buggy/{repol}/{repol}_{id}_buggy".format(repol=key.lower(), id=idnum), shell=True)
-            if not os.path.exists("./tmp/defects4j_buggy/{repol}/{repol}/{repol}_{id}_buggy".format(id=idnum, repol=key.lower())):
-                os.makedirs("./tmp/defects4j_buggy/{repol}/{repol}/{repol}_{id}_buggy".format(id=idnum, repol=key.lower()))
-            if len(growing_bugs_dataset[key]["sub_project"]) == 0: 
-                subprocess.run('defects4j checkout -p {repo} -v {id}b -w ./tmp/defects4j_buggy/{repol}/{repol}_{id}_buggy'\
-                            .format(repo=key, id=idnum, repol=key.lower()), shell=True)
+            
+            # Defects4J v2.0 doesn't use sub-projects
+            has_subproject = False
+            
+            if not has_subproject: 
+                checkout_result = subprocess.run('defects4j checkout -p {repo} -v {id}b -w ./tmp/defects4j_buggy/{repol}/{repol}_{id}_buggy'\
+                            .format(repo=key, id=idnum, repol=key.lower()), shell=True, capture_output=True, text=True)
+                if checkout_result.returncode != 0:
+                    print(f"ERROR: Failed to checkout {key}-{idnum}")
+                    print(f"defects4j may not support GrowingBugs project: {key}")
+                    print(f"Error: {checkout_result.stderr}")
+                    with open("./error.txt" ,'a') as f:
+                        f.write(f"Checkout failed for {key}-{idnum}: {checkout_result.stderr}\n")
+                    continue
                 testmethods = os.popen("defects4j export "
                                    "-w ./tmp/defects4j_buggy/{repol}/{repol}_{id}_buggy "
                                    "-p tests.trigger".format(repol=key.lower(), id=idnum)).readlines()
             else:
-                subprocess.run('defects4j checkout -p {repo} -v {id}b -w ./tmp/defects4j_buggy/{repol}/{repol}_{id}_buggy -s {sub}'\
-                            .format(repo=key, id=idnum, repol=key.lower(), sub=growing_bugs_dataset[key]["sub_project"]), shell=True)
+                checkout_result = subprocess.run('defects4j checkout -p {repo} -v {id}b -w ./tmp/defects4j_buggy/{repol}/{repol}_{id}_buggy -s {sub}'\
+                            .format(repo=key, id=idnum, repol=key.lower(), sub=growing_bugs_dataset[key]["sub_project"]), shell=True, capture_output=True, text=True)
+                if checkout_result.returncode != 0:
+                    print(f"ERROR: Failed to checkout {key}-{idnum}")
+                    print(f"defects4j may not support GrowingBugs project: {key}")
+                    print(f"Error: {checkout_result.stderr}")
+                    with open("./error.txt" ,'a') as f:
+                        f.write(f"Checkout failed for {key}-{idnum}: {checkout_result.stderr}\n")
+                    continue
                 testmethods = os.popen("defects4j export "
                                    "-w ./tmp/defects4j_buggy/{repol}/{repol}_{id}_buggy/{sub} "
                                    "-p tests.trigger".format(repol=key.lower(), id=idnum, sub=growing_bugs_dataset[key]["sub_project"])).readlines()
@@ -195,7 +240,23 @@ def test_all_patches():
             #         outputlist.append(outputdict[num])
             # new file format
             for item in outputdict:
-                outputlist.append(item["output"])
+                output = item["output"]
+                # Remove markdown code blocks if present
+                if output.strip().startswith("```"):
+                    lines = output.strip().split('\n')
+                    # Remove first line (```java or ```)
+                    lines = lines[1:]
+                    # Remove last line if it's ```
+                    if lines and lines[-1].strip() == "```":
+                        lines = lines[:-1]
+                    # Remove explanation text after closing ```
+                    code_lines = []
+                    for line in lines:
+                        if line.strip() == "```":
+                            break
+                        code_lines.append(line)
+                    output = '\n'.join(code_lines)
+                outputlist.append(output)
             # outputlist = list(set(outputlist))
             tries = len(outputlist)
             originalfile = './tmp/defects4j_buggy/{repo}/{repo}_{id}_buggy/{file}'.format(repo=key.lower(), id=idnum, file=modifyfile)
@@ -231,7 +292,8 @@ def test_all_patches():
                 with open(originalfile, 'w', encoding='utf-8') as f:
                     f.write(newfile)
                 # Begin Testing
-                if len(growing_bugs_dataset[key]["sub_project"]) == 0:
+                has_subproject = key in growing_bugs_dataset and len(growing_bugs_dataset[key].get("sub_project", "")) > 0
+                if not has_subproject:
                     working_dir = "./tmp/defects4j_buggy/{repo}/{repo}_{id}_buggy/".format(repo=key.lower(), id=idnum)
                 else:
                     working_dir = "./tmp/defects4j_buggy/{repo}/{repo}_{id}_buggy/{sub}/".format(repo=key.lower(), id=idnum, sub=growing_bugs_dataset[key]["sub_project"])
@@ -256,6 +318,17 @@ def test_all_patches():
                     correctpathes.append(outputlist[i])
                 javaf = open(originalfile, 'w', encoding='utf-8')
                 javaf.write(originalcontent)
+            
+            processed += 1
+    
+    print("\n" + "="*60)
+    print(f"Processing complete!")
+    print(f"Processed: {processed} bugs")
+    print(f"Plausible patches: {plausible}")
+    if skipped_projects:
+        print(f"Skipped projects (not in defects4j): {sorted(skipped_projects)}")
+        print(f"Total skipped bugs: {sum(len(info[p]) for p in skipped_projects if p in info)}")
+    print("="*60)
 
 
 if __name__ == "__main__":
