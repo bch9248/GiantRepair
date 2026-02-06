@@ -1,0 +1,22 @@
+# Core dependencies for LLM-based Automated Program Repair
+# Python 3.9 recommended
+
+# OpenAI API and Azure OpenAI support
+openai>=1.0.0
+python-dotenv>=1.0.0
+
+# PyTorch and Deep Learning
+torch>=2.0.0
+transformers>=4.33.3
+accelerate>=0.20.0
+
+# Scientific computing
+numpy>=1.24.0
+
+# Additional utilities
+javalang>=0.13.0
+pandas>=2.0.0
+openpyxl>=3.1.0
+
+# For testing and development
+pytest>=7.4.0
