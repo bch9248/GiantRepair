@@ -6,16 +6,24 @@ import json
 import time
 import random
 import numpy as np
-import openai
+from openai import AzureOpenAI
 from difflib import unified_diff
+from dotenv import load_dotenv
 
 from Models.model import GPT2, starCoder, LLama2, CodeLLama
 from utils.parse_d4j import clean_parse_d4j, clean_parse_d4j_topN, pick_smallest_example_fix, pick_smallest_example_fix_topN, clean_parse_d4j_expand
 from utils.prompt import JAVA_LONG_VARY_PROMPT
-from Repair.utils.api_request import request_engine, create_openai_config, create_gpt4_config, create_openai_config_suffix, create_openai_config_single
+from utils.api_request import request_engine, create_openai_config, create_gpt4_config, create_openai_config_suffix, create_openai_config_single
 
-openai.api_key = ""
-openai.api_base = ""
+# Load environment variables from .env file
+load_dotenv()
+
+# Initialize Azure OpenAI client (global)
+client = AzureOpenAI(
+    api_key=os.getenv("AZURE_OPENAI_KEY"),
+    api_version=os.getenv("AZURE_OPENAI_API_VERSION", "2025-01-01-preview"),
+    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
+)
 
 
 def set_seed(seed: int):
@@ -82,7 +90,7 @@ def repair(args, model, bugs, folder, used_prompt, chances, skip_val=True, only_
         f.write(used_prompt)
     with open(folder + "/args.txt", "w") as f:
         f.write(str(args))
-    all_dataset = clean_parse_d4j_expand("../../")
+    all_dataset = clean_parse_d4j_expand("../")
     result = {}
     t_generated = 0
     t_unique = 0
@@ -181,7 +189,7 @@ def repair_codex(args, bugs, folder, used_prompt, chances, stop, skip_val=True, 
     t_generated = 0
     t_unique = 0
     start_t = time.time()
-    all_dataset = clean_parse_d4j("../../")
+    all_dataset = clean_parse_d4j("../")
 
     for file_name, bug in bugs.items():
         if os.path.exists("{}/{}.json".format(folder, file_name.split(".")[0])):
@@ -257,22 +265,21 @@ def repair_gpt4(args, bugs, folder, used_prompt, chances, stop, skip_val=True, o
     with open(folder + "/args.txt", "w") as f:
         f.write(str(args))
 
-    all_dataset = clean_parse_d4j("../../")
+    all_dataset = clean_parse_d4j("../")
     result = {}
     t_generated = 0
     t_unique = 0
     start_t = time.time()
-    our_fixes_file_path = "../tool_fixes.txt"
-    lines = open(our_fixes_file_path).readlines()
-    bugids = [bugid.strip() for bugid in lines]
-    bugids = random.sample(bugids, 10)
-    # print(bugids)
-    bugids = ['Closure_36', 'Lang_57', 'Math_85', 'Jsoup_33', 'Closure_113','Closure_19','Math_27','Compress_1','Cli_32','Codec_4']
+    
+    # Optional: Uncomment to test on specific bugs only
+    # bugids = ['Closure_36', 'Lang_57', 'Math_85', 'Jsoup_33', 'Closure_113','Closure_19','Math_27','Compress_1','Cli_32','Codec_4']
+    
     for file_name, bug in bugs.items():
         # print(file_name, bug)
-        file_tmp = file_name.split(".java")[0].replace('-', '_')
-        if file_tmp not in bugids:
-            continue
+        # Uncomment the following lines to filter specific bugs
+        # file_tmp = file_name.split(".java")[0].replace('-', '_')
+        # if file_tmp not in bugids:
+        #     continue
         if "Collections" in file_name:
             example_bug, example_fix = pick_smallest_example_fix_topN(all_dataset, file_name, only_same=False)
         else:
@@ -310,13 +317,13 @@ def main():
     args = parser.parse_args()
     if args.dataset == "defects4j":
         print(args.dataset)
-        dataset = clean_parse_d4j(folder="../../")
+        dataset = clean_parse_d4j(folder="../")
         prompt = JAVA_LONG_VARY_PROMPT
         stop = "// Provide a fix for the buggy function"
         args.language = "java"
     elif args.dataset == "defects4jTop":
         print(args.dataset)
-        dataset = clean_parse_d4j_topN(folder="../../")
+        dataset = clean_parse_d4j_topN(folder="../")
         prompt = JAVA_LONG_VARY_PROMPT
         stop = "// Provide a fix for the buggy function"
         args.language = "java"
@@ -353,3 +360,13 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+'''
+python3 run_apr.py \
+  --model_name gpt-4 \
+  --batch_size 1 \
+  --chances 10 \
+  --dataset defects4j \
+  --skip_val \
+  --folder ../results/azure_gpt4_patches
+'''
