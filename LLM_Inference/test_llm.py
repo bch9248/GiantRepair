@@ -7,10 +7,52 @@ import javalang
 import time
 import re
 import signal
+import argparse
+from tqdm import tqdm
 from utils.DataSet import DataSet
 
 # Use Defects4J v2.0 dataset
 bugs = DataSet('../d4j-info/single_function_repair.json', '../d4j-info/filelist.json')
+
+def generate_summary(rootpath, outcome):
+    """
+    Generate summary statistics for the evaluation results
+    :param rootpath: Path to the folder containing generated patches (JSON files)
+    :param outcome: Path to the folder containing test results (TXT files)
+    """
+    import glob
+    
+    # Count total bugs (JSON files in rootpath)
+    json_files = glob.glob(os.path.join(rootpath, "*.json"))
+    total_bugs = len(json_files)
+    
+    # Count fixed bugs (TXT files in outcome)
+    txt_files = glob.glob(os.path.join(outcome, "*.txt"))
+    fixed_bugs = len(txt_files)
+    
+    # Calculate pass rate
+    pass_rate = (fixed_bugs / total_bugs * 100) if total_bugs > 0 else 0.0
+    
+    # Create summary dictionary
+    summary = {
+        "total_bugs": total_bugs,
+        "fixed_bugs": fixed_bugs,
+        "pass_rate": round(pass_rate, 2)
+    }
+    
+    # Write summary to JSON file
+    summary_file = os.path.join(outcome, "summary.json")
+    with open(summary_file, 'w') as f:
+        json.dump(summary, f, indent=4)
+    
+    print("\n" + "="*60)
+    print("SUMMARY STATISTICS")
+    print("="*60)
+    print(f"Total bugs: {total_bugs}")
+    print(f"Fixed bugs: {fixed_bugs}")
+    print(f"Pass rate: {pass_rate:.2f}%")
+    print(f"Summary saved to: {summary_file}")
+    print("="*60)
 
 # Get available defects4j projects
 def get_available_d4j_projects():
@@ -158,36 +200,52 @@ def run_d4j_test(source, testmethods, bug_id, workingdir):
     return compile_fail, time_out, buggy, entire_buggy, False
 
 
-def test_all_patches():
+def test_all_patches(rootpath='../results/defects4j_v20/', outcome='../results/defects4j_v20_test_results/', redo=False):
     plausible = 0
-    outcome = '../results/defects4j_v20_test_results/'
-    rootpath = '../results/defects4j_v20/'
+    # Ensure paths end with slash
+    rootpath = rootpath.rstrip('/') + '/'
+    outcome = outcome.rstrip('/') + '/'
     info = bugs.getBugList()
     
-    # Print available projects info
-    print(f"Available defects4j projects: {sorted(AVAILABLE_D4J_PROJECTS)}")
-    print(f"Total bugs to process: {sum(len(ids) for ids in info.values())}")
+    # Load or initialize detail.json for tracking evaluated bugs
+    detail_file = os.path.join(outcome, 'detail.json')
+    if os.path.exists(detail_file) and not redo:
+        with open(detail_file, 'r') as f:
+            evaluated_bugs = json.load(f)
+    else:
+        evaluated_bugs = {}
     
     skipped_projects = set()
     processed = 0
+    
+    # Calculate total bugs to process
+    total_bugs = sum(len(ids) for p, ids in info.items() if p in AVAILABLE_D4J_PROJECTS)
+    
+    # Create progress bar
+    pbar = tqdm(total=total_bugs, desc="Evaluating patches", unit="bug")
     
     for key in info:
         # Check if project is supported
         if key not in AVAILABLE_D4J_PROJECTS:
             if key not in skipped_projects:
                 skipped_projects.add(key)
-                print(f"SKIP: Project '{key}' not available in defects4j")
+                pbar.write(f"⚠️  SKIP: Project '{key}' not available in defects4j")
             continue
         
         ids = info[key]
         for idnum in ids:
             # if key not in projs:
                 # continue
-            if os.path.exists("{}/{}_{}.txt".format(outcome, key, idnum)):
+            bug_id = f"{key}_{idnum}"
+            pbar.set_description(f"Evaluating {key}-{idnum}")
+            
+            if not redo and bug_id in evaluated_bugs:
+                pbar.write(f"⏭️  SKIP: {bug_id} (already evaluated)")
+                pbar.update(1)
                 continue
             if not os.path.exists("{}/{}-{}.json".format(rootpath, key, idnum)):
+                pbar.update(1)
                 continue
-            print("{}_{}".format(key, idnum))
 
             subprocess.run("rm -rf ./tmp/defects4j_buggy/{repol}/{repol}_{id}_buggy".format(repol=key.lower(), id=idnum), shell=True)
             
@@ -198,11 +256,10 @@ def test_all_patches():
                 checkout_result = subprocess.run('defects4j checkout -p {repo} -v {id}b -w ./tmp/defects4j_buggy/{repol}/{repol}_{id}_buggy'\
                             .format(repo=key, id=idnum, repol=key.lower()), shell=True, capture_output=True, text=True)
                 if checkout_result.returncode != 0:
-                    print(f"ERROR: Failed to checkout {key}-{idnum}")
-                    print(f"defects4j may not support GrowingBugs project: {key}")
-                    print(f"Error: {checkout_result.stderr}")
+                    pbar.write(f"❌ ERROR: Failed to checkout {key}-{idnum}")
                     with open("./error.txt" ,'a') as f:
                         f.write(f"Checkout failed for {key}-{idnum}: {checkout_result.stderr}\n")
+                    pbar.update(1)
                     continue
                 testmethods = os.popen("defects4j export "
                                    "-w ./tmp/defects4j_buggy/{repol}/{repol}_{id}_buggy "
@@ -211,11 +268,10 @@ def test_all_patches():
                 checkout_result = subprocess.run('defects4j checkout -p {repo} -v {id}b -w ./tmp/defects4j_buggy/{repol}/{repol}_{id}_buggy -s {sub}'\
                             .format(repo=key, id=idnum, repol=key.lower(), sub=growing_bugs_dataset[key]["sub_project"]), shell=True, capture_output=True, text=True)
                 if checkout_result.returncode != 0:
-                    print(f"ERROR: Failed to checkout {key}-{idnum}")
-                    print(f"defects4j may not support GrowingBugs project: {key}")
-                    print(f"Error: {checkout_result.stderr}")
+                    pbar.write(f"❌ ERROR: Failed to checkout {key}-{idnum}")
                     with open("./error.txt" ,'a') as f:
                         f.write(f"Checkout failed for {key}-{idnum}: {checkout_result.stderr}\n")
+                    pbar.update(1)
                     continue
                 testmethods = os.popen("defects4j export "
                                    "-w ./tmp/defects4j_buggy/{repol}/{repol}_{id}_buggy/{sub} "
@@ -298,8 +354,6 @@ def test_all_patches():
                 else:
                     working_dir = "./tmp/defects4j_buggy/{repo}/{repo}_{id}_buggy/{sub}/".format(repo=key.lower(), id=idnum, sub=growing_bugs_dataset[key]["sub_project"])
                 compile_fail, timed_out, buggy, entire_buggy, syntax_error = run_d4j_test(newfile, testmethods, "{}_{}".format(key, idnum), working_dir)
-                print("testoutcome: {}, {}, {}, {}, {}".format(
-                    compile_fail, timed_out, buggy, entire_buggy, syntax_error))
 
                 if not compile_fail and not timed_out and not buggy and not entire_buggy and not syntax_error:
                     plausible += 1
@@ -319,7 +373,23 @@ def test_all_patches():
                 javaf = open(originalfile, 'w', encoding='utf-8')
                 javaf.write(originalcontent)
             
+            # Record this bug as evaluated in detail.json
+            evaluated_bugs[bug_id] = {
+                "json_file": f"{key}-{idnum}.json",
+                "total_patches": len(outputlist),
+                "plausible_patches": len(correctpathes),
+                "evaluated_at": time.strftime("%Y-%m-%d %H:%M:%S")
+            }
+            
+            # Save detail.json after each bug evaluation
+            os.makedirs(outcome, exist_ok=True)
+            with open(detail_file, 'w') as f:
+                json.dump(evaluated_bugs, f, indent=4)
+            
             processed += 1
+            pbar.update(1)
+    
+    pbar.close()
     
     print("\n" + "="*60)
     print(f"Processing complete!")
@@ -329,9 +399,57 @@ def test_all_patches():
         print(f"Skipped projects (not in defects4j): {sorted(skipped_projects)}")
         print(f"Total skipped bugs: {sum(len(info[p]) for p in skipped_projects if p in info)}")
     print("="*60)
+    
+    # Generate summary statistics
+    generate_summary(rootpath, outcome)
 
 
 if __name__ == "__main__":
-    # getDefects4jLines()
-    # getDefects4jFiles()
-    test_all_patches()
+    parser = argparse.ArgumentParser(description='Test LLM-generated patches')
+    parser.add_argument('--rootpath', type=str, default='../results/test/',
+                        help='Path to folder containing generated patches')
+    parser.add_argument('--outcome', type=str, default='../results/test_results/',
+                        help='Path to folder for test results')
+    parser.add_argument('--redo', action='store_true',
+                        help='Redo testing for bugs that already have results')
+    parser.add_argument('--mode', type=str, default='naive',
+                        choices=['naive', 'cot', 'react', 'pearl', 'sr', 'all'],
+                        help='Specific mode to test (naive, cot, react, pearl, sr), or "all" to test all modes')
+    args = parser.parse_args()
+    
+    if args.mode == 'all':
+        # Test all modes
+        modes_to_test = ['naive', 'cot', 'react', 'pearl', 'sr']
+        for mode in modes_to_test:
+            rootpath = args.rootpath.rstrip('/') + f'/{mode}/'
+            outcome = args.outcome.rstrip('/') + f'/{mode}/'
+            
+            # Check if this mode is already complete (skip if not using --redo)
+            if not args.redo and os.path.exists(rootpath):
+                # Get all JSON files in rootpath (inference results)
+                json_files = [f for f in os.listdir(rootpath) if f.endswith('.json')]
+                total_bugs = len(json_files)
+                
+                # Check how many have been evaluated by reading detail.json
+                detail_file = os.path.join(outcome, 'detail.json')
+                if os.path.exists(detail_file):
+                    with open(detail_file, 'r') as f:
+                        evaluated_bugs = json.load(f)
+                    evaluated_count = len(evaluated_bugs)
+                    
+                    # If all bugs have been evaluated, skip this mode
+                    if evaluated_count >= total_bugs and total_bugs > 0:
+                        print(f"\n{'='*60}")
+                        print(f"⏭️  SKIP MODE: {mode.upper()} (already complete: {evaluated_count}/{total_bugs} bugs)")
+                        print(f"{'='*60}\n")
+                        continue
+            
+            print(f"\n{'='*60}")
+            print(f"🧪 TESTING MODE: {mode.upper()}")
+            print(f"{'='*60}\n")
+            test_all_patches(rootpath=rootpath, outcome=outcome, redo=args.redo)
+    else:
+        # Test specific mode
+        rootpath = args.rootpath.rstrip('/') + f'/{args.mode}/'
+        outcome = args.outcome.rstrip('/') + f'/{args.mode}/'
+        test_all_patches(rootpath=rootpath, outcome=outcome, redo=args.redo)
