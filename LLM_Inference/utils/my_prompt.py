@@ -130,11 +130,20 @@ def get_sr_prompt():
     Strategy E: Our Anchor Reasoning approach
     """
     return """// Task: Fix the buggy Java function below following this anchor reasoning approach:
-1. Understand what this buggy code is supposed to do, generate a clear problem description, and regenerate a code based on the problem description.
-2. Analyze the buggy code and identify the root cause of the bug.
-3. Think about how to fix it, and generate the fixed code.
-4. Check if the fix is correct and if it compiles. If not, repeat the above steps until the function is fixed.
-5. Consider the code regenerated in step 1 as an global anchor, integrate the global anchor and the fixed code generated in step 3 to generate the final fixed code.
+
+// Bug_information:
+{bug_info}   
+
+// Approach: 
+// Step 1. Read the Bug_information and regenerate the buggy function that meet the global intent and pass all the tests in the Bug_information.
+// Step 2. Now look at the buggy code and apply ReAct reasoning approach to fix the code.
+// ReAct Approach:
+// 1. Thought: Analyze the buggy code and identify how to fix it.
+// 2. Action: Fix based on previous thought.
+// 3. Observation: Check if the fix is correct and if it compiles.
+// ... Repeat until the function is fixed.
+
+// Step 3. Consider the code regenerated in step 1 as an global anchor, integrate the global anchor and the fixed code generated in step 2 to generate the final fixed code.
 
 // Reference Example:
 // Before (buggy):
@@ -143,7 +152,94 @@ def get_sr_prompt():
 // After (fixed):
 {example_fix}
 
-// Now fix this buggy function following the anchor reasoning approach:
+// Now fix this buggy function following the anchor reasoning approach, only output the final fixed code without any explanation, markdown (ex. ```java), and reasoning process:
+// Buggy Function:
+{bug}
+
+// Fixed Function:
+"""
+
+def get_srwoa_prompt():
+    """
+    Strategy E: Our Anchor Reasoning approach
+    """
+    return """// Task: Fix the buggy Java function below following this anchor reasoning approach:
+
+// Bug_information:
+{bug_info}   
+
+// Approach: 
+Read the Bug_information and regenerate the buggy function that meet the global intent and pass all the tests in the Bug_information.
+
+// Reference Example:
+// Before (buggy):
+{example_bug}
+
+// After (fixed):
+{example_fix}
+
+// Now fix this buggy function following the anchor reasoning approach, only output the final fixed code without any explanation, markdown (ex. ```java), and reasoning process:
+// Buggy Function:
+{bug}
+
+// Fixed Function:
+"""
+
+def get_srwoi_prompt():
+    """
+    Strategy E: Our Anchor Reasoning approach
+    """
+    return """// Task: Fix the buggy Java function below following this anchor reasoning approach:
+
+// Bug_information:
+{bug_info}   
+
+// Approach: 
+// Step 1. Read the Bug_information and regenerate the buggy function that meet the global intent and pass all the tests in the Bug_information.
+// Step 2. Now look at the buggy code and apply ReAct reasoning approach to fix the code.
+// ReAct Approach:
+// 1. Thought: Analyze the buggy code and identify how to fix it.
+// 2. Action: Fix based on previous thought.
+// 3. Observation: Check if the fix is correct and if it compiles.
+// ... Repeat until the function is fixed.
+
+// Step 3. Consider the code regenerated in step 1 as an global anchor, integrate the global anchor and the fixed code generated in step 2 to generate the final fixed code.
+
+// Reference Example:
+// Before (buggy):
+{example_bug}
+
+// After (fixed):
+{example_fix}
+
+// Now fix this buggy function following the anchor reasoning approach, only output the final fixed code without any explanation, markdown (ex. ```java), and reasoning process:
+// Buggy Function:
+{bug}
+
+// Fixed Function:
+"""
+
+def get_usc_prompt():
+    """
+    Strategy F: Unified Self-Consistency approach
+    """
+    return """// Task: Fix the buggy Java function below following this anchor reasoning approach:
+
+// Bug_information:
+{bug_info}   
+
+// Approach: 
+// Step 1. Read the Bug_information and provide three version of fix that meet the global intent and pass all the tests in the Bug_information.
+// Step 2. Choos the most consistency one among the three versions as the final fix.
+
+// Reference Example:
+// Before (buggy):
+{example_bug}
+
+// After (fixed):
+{example_fix}
+
+// Now fix this buggy function following the anchor reasoning approach, only output the final fixed code without any explanation, markdown (ex. ```java), and reasoning process:
 // Buggy Function:
 {bug}
 

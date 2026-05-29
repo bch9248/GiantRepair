@@ -33,6 +33,9 @@ def run_inference(args):
     if args.redo:
         cmd.append("--redo")
     
+    if args.use_enriched:
+        cmd.append("--use_enriched")
+    
     if args.weight:
         cmd.extend(["--weight", args.weight])
     
@@ -60,7 +63,7 @@ def run_evaluation(args):
     # Determine paths based on mode
     if args.mode == "all":
         # When mode is 'all', test_llm will be called for each mode separately
-        modes_to_test = ["naive", "cot", "react", "pearl", "sr"]
+        modes_to_test = ["naive", "cot", "react", "pearl", "sr", "srwoa", "srwoi", "usc"]
         all_success = True
         for mode in modes_to_test:
             print(f"\nEvaluating mode: {mode}")
@@ -141,7 +144,7 @@ Examples:
                         help="Batch size for inference")
     parser.add_argument("--dataset", type=str, default="defects4j-v2.0",
                         help="Dataset: defects4j (GrowingBugs-57), defects4j-v1.2 (251), defects4j-v2.0 (232), defects4j-all (483)")
-    parser.add_argument("--chances", type=int, default=3,
+    parser.add_argument("--chances", type=int, default=5,
                         help="Number of patches to generate per bug")
     parser.add_argument("--skip_val", action="store_true", default=True,
                         help="Skip validation during inference")
@@ -150,8 +153,10 @@ Examples:
     parser.add_argument("--test_results_folder", type=str, default="../results/test_results",
                         help="Folder to save evaluation results")
     parser.add_argument("--mode", type=str, default="naive",
-                        choices=["naive", "cot", "react", "pearl", "sr", "all"],
-                        help="Prompt strategy mode: naive, cot, react, pearl, sr (specific strategy), or 'all' to run all modes")
+                        choices=["naive", "cot", "react", "pearl", "sr", "srwoa", "srwoi", "usc", "all"],
+                        help="Prompt strategy mode: naive, cot, react, pearl, sr (specific strategy), usc (Unified Self-Consistency), or 'all' to run all modes")
+    parser.add_argument("--use_enriched", action="store_true",
+                        help="Use enriched dataset with test information (Defects4J metadata)")
     parser.add_argument("--seed", type=int, default=420,
                         help="Random seed")
     parser.add_argument("--weight", type=str, default=None,
@@ -210,8 +215,8 @@ Examples:
     print("="*60)
     print(f"Total time: {overall_elapsed:.2f}s ({overall_elapsed/60:.2f} minutes)")
     if args.mode == "all":
-        print(f"Results: {args.results_folder}/{{naive,cot,react,pearl,sr}}")
-        print(f"Evaluation: {args.test_results_folder}/{{naive,cot,react,pearl,sr}}")
+        print(f"Results: {args.results_folder}/{{naive,cot,react,pearl,sr,srwoa,srwoi}}")
+        print(f"Evaluation: {args.test_results_folder}/{{naive,cot,react,pearl,sr,srwoa,srwoi}}")
     else:
         print(f"Results: {args.results_folder}/{args.mode}")
         print(f"Evaluation: {args.test_results_folder}/{args.mode}")

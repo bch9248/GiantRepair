@@ -1,0 +1,641 @@
+Checkout failed for Canvas_api-1: Error: Canvas_api is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Canvas_api", 1) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Canvas_api", "1b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Canvas_api-2: Error: Canvas_api is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Canvas_api", 2) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Canvas_api", "2b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Dosgi_common-2: Error: Dosgi_common is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Dosgi_common", 2) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Dosgi_common", "2b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Hono_client-3: Error: Hono_client is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Hono_client", 3) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Hono_client", "3b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Hono_client-4: Error: Hono_client is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Hono_client", 4) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Hono_client", "4b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Tika_app-1: Error: Tika_app is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Tika_app", 1) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Tika_app", "1b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for HttpClient5-1: Error: HttpClient5 is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("HttpClient5", 1) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("HttpClient5", "1b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for HttpClient5-6: Error: HttpClient5 is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("HttpClient5", 6) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("HttpClient5", "6b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for HttpClient5-7: Error: HttpClient5 is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("HttpClient5", 7) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("HttpClient5", "7b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for JacksonDatatypeJsr310-1: Error: JacksonDatatypeJsr310 is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("JacksonDatatypeJsr310", 1) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("JacksonDatatypeJsr310", "1b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for JacksonModuleAfterburner-2: Error: JacksonModuleAfterburner is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("JacksonModuleAfterburner", 2) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("JacksonModuleAfterburner", "2b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Switchyard_admin-1: Error: Switchyard_admin is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Switchyard_admin", 1) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Switchyard_admin", "1b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Switchyard_validate-1: Error: Switchyard_validate is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Switchyard_validate", 1) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Switchyard_validate", "1b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Qpidjms_client-3: Error: Qpidjms_client is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Qpidjms_client", 3) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Qpidjms_client", "3b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Tiles_api-1: Error: Tiles_api is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Tiles_api", 1) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Tiles_api", "1b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Tiles_core-1: Error: Tiles_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Tiles_core", 1) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Tiles_core", "1b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Tiles_core-2: Error: Tiles_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Tiles_core", 2) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Tiles_core", "2b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_request-1: Error: Wicket_request is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_request", 1) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_request", "1b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_request-2: Error: Wicket_request is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_request", 2) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_request", "2b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_request-3: Error: Wicket_request is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_request", 3) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_request", "3b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_request-4: Error: Wicket_request is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_request", 4) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_request", "4b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_request-5: Error: Wicket_request is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_request", 5) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_request", "5b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_util-1: Error: Wicket_util is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_util", 1) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_util", "1b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_util-2: Error: Wicket_util is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_util", 2) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_util", "2b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_util-3: Error: Wicket_util is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_util", 3) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_util", "3b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_util-4: Error: Wicket_util is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_util", 4) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_util", "4b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_spring-1: Error: Wicket_spring is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_spring", 1) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_spring", "1b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Struts1_core-1: Error: Struts1_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Struts1_core", 1) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Struts1_core", "1b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Struts1_core-2: Error: Struts1_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Struts1_core", 2) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Struts1_core", "2b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_core-2: Error: Wicket_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_core", 2) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_core", "2b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_core-3: Error: Wicket_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_core", 3) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_core", "3b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_core-5: Error: Wicket_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_core", 5) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_core", "5b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_core-6: Error: Wicket_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_core", 6) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_core", "6b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_core-7: Error: Wicket_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_core", 7) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_core", "7b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_core-9: Error: Wicket_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_core", 9) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_core", "9b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_core-10: Error: Wicket_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_core", 10) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_core", "10b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_core-12: Error: Wicket_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_core", 12) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_core", "12b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_core-13: Error: Wicket_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_core", 13) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_core", "13b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_core-14: Error: Wicket_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_core", 14) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_core", "14b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_core-15: Error: Wicket_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_core", 15) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_core", "15b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Wicket_core-17: Error: Wicket_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Wicket_core", 17) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Wicket_core", "17b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Cargo_container-1: Error: Cargo_container is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Cargo_container", 1) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Cargo_container", "1b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Cargo_container-2: Error: Cargo_container is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Cargo_container", 2) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Cargo_container", "2b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Cargo_container-3: Error: Cargo_container is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Cargo_container", 3) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Cargo_container", "3b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Jcodemodel-5: Error: Jcodemodel is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Jcodemodel", 5) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Jcodemodel", "5b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Vectorz-1: Error: Vectorz is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Vectorz", 1) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Vectorz", "1b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Vectorz-4: Error: Vectorz is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Vectorz", 4) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Vectorz", "4b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Restfixture-2: Error: Restfixture is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Restfixture", 2) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Restfixture", "2b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Restfixture-4: Error: Restfixture is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Restfixture", 4) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Restfixture", "4b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Xades4j-3: Error: Xades4j is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Xades4j", 3) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Xades4j", "3b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Render_app-3: Error: Render_app is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Render_app", 3) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Render_app", "3b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Render_app-4: Error: Render_app is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Render_app", 4) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Render_app", "4b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Render_app-5: Error: Render_app is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Render_app", 5) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Render_app", "5b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Leshan_core-1: Error: Leshan_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Leshan_core", 1) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Leshan_core", "1b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Leshan_core-2: Error: Leshan_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Leshan_core", 2) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Leshan_core", "2b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Leshan_core-5: Error: Leshan_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Leshan_core", 5) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Leshan_core", "5b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Leshan_core-6: Error: Leshan_core is not a project id; for a list, see https://github.com/rjust/defects4j#the-projects
+ at /home/azureuser/defects4j/framework/core/Utils.pm line 625.
+	Utils::ensure_valid_bid("Leshan_core", 6) called at /home/azureuser/defects4j/framework/core/Utils.pm line 657
+	Utils::ensure_valid_vid("Leshan_core", "6b") called at /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout line 87
+	require /home/azureuser/defects4j/framework/bin/d4j/d4j-checkout called at /home/azureuser/defects4j/framework/bin/defects4j line 195
+Compilation failed in require at /home/azureuser/defects4j/framework/bin/defects4j line 195.
+
+Checkout failed for Canvas_api-1: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x63ea17fc81c8), "1f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::Canvas_api=HASH(0x63ea17fd53b0), "1b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Canvas_api-2: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x5c9abeb1f7f8), "2f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::Canvas_api=HASH(0x5c9abeb4c5f0), "2b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Dosgi_common-2: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x570a17037e90), "2f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::Dosgi_common=HASH(0x570a17038058), "2b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Hono_client-3: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x5c995213db10), "3f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::Hono_client=HASH(0x5c9952165e70), "3b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Hono_client-4: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x6235f7e7ca58), "4f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::Hono_client=HASH(0x6235f7e92840), "4b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Tika_app-1: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x5f316f047918), "1f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::Tika_app=HASH(0x5f316f632cd8), "1b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for HttpClient5-1: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x605e0a137bc0), "1f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::HttpClient5=HASH(0x605e0a1416b0), "1b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for HttpClient5-6: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x60aec7d9a7d0), "6f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::HttpClient5=HASH(0x60aec7dba160), "6b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for HttpClient5-7: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x6078d11d9ed0), "7f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::HttpClient5=HASH(0x6078d11f9dc0), "7b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for JacksonDatatypeJsr310-1: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x572c8f560618), "1f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::JacksonDatatypeJsr310=HASH(0x572c8f560d38), "1b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for JacksonModuleAfterburner-2: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x64d786e9dab0), "2f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::JacksonModuleAfterburner=HASH(0x64d786b23eb8), "2b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Switchyard_admin-1: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x6422419e8918), "1f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::Switchyard_admin=HASH(0x642241f79a60), "1b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Switchyard_validate-1: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x602c083cf918), "1f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::Switchyard_validate=HASH(0x602c0895fa98), "1b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Qpidjms_client-3: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x601bfee31e50), "3f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::Qpidjms_client=HASH(0x601bfef530f0), "3b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Canvas_api-1: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x5d0a392a1658), "1f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::Canvas_api=HASH(0x5d0a392ce3e0), "1b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Canvas_api-2: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x63bf45c450e8), "2f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::Canvas_api=HASH(0x63bf45c71960), "2b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Dosgi_common-2: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x5becc3befc08), "2f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::Dosgi_common=HASH(0x5becc3c02908), "2b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Hono_client-3: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x5a467ba96d60), "3f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::Hono_client=HASH(0x5a467bad9100), "3b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Hono_client-4: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x5f5eedfd9090), "4f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::Hono_client=HASH(0x5f5eee031590), "4b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Tika_app-1: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x5f63ce77cf78), "1f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::Tika_app=HASH(0x5f63ce7b9568), "1b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for HttpClient5-1: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x5972d9a6f418), "1f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::HttpClient5=HASH(0x5972d9a7a360), "1b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for HttpClient5-6: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x5ea3890d0308), "6f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::HttpClient5=HASH(0x5ea3890f03e0), "6b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for HttpClient5-7: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x5c476f87f670), "7f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::HttpClient5=HASH(0x5c476f884620), "7b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for JacksonDatatypeJsr310-1: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x5f9bc642bc30), "1f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::JacksonDatatypeJsr310=HASH(0x5f9bc607b278), "1b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for JacksonModuleAfterburner-2: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x6051431b90c0), "2f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::JacksonModuleAfterburner=HASH(0x6051431b91f8), "2b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Switchyard_admin-1: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x5e48c6c257d0), "1f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::Switchyard_admin=HASH(0x5e48c6ce5690), "1b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Switchyard_validate-1: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x5dd3276554b8), "1f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::Switchyard_validate=HASH(0x5dd327655608), "1b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Qpidjms_client-3: Use of uninitialized value $work_dir in concatenation (.) or string at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 386.
+Use of uninitialized value $work_dir in -d at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 265.
+Failed to create working directory: No such file or directory at /home/azureuser/GrowingBugRepository/framework/core/Vcs.pm line 294.
+	Vcs::checkout_vid(Vcs::Git=HASH(0x5ead1b747cc0), "3f", undef) called at /home/azureuser/GrowingBugRepository/framework/core/Project.pm line 412
+	Project::checkout_vid(Project::Qpidjms_client=HASH(0x5ead1b84f7b0), "3b", undef, 0, ".") called at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101
+	require /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout called at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Render_app-3: Checking out 7e8515dd to /home/azureuser/GiantRepair/LLM_Inference/tmp/grow FAIL
+Executed command: git clone /home/azureuser/GrowingBugRepository/project_repos/render-app.git /home/azureuser/GiantRepair/LLM_Inference/tmp/growingbugs/render_app/render_app_3_buggy 2>&1 && cd /home/azureuser/GiantRepair/LLM_Inference/tmp/growingbugs/render_app/render_app_3_buggy && git checkout 7e8515dd55604cfb85edab6307b5b82cd3db9b01 2>&1
+fatal: repository '/home/azureuser/GrowingBugRepository/project_repos/render-app.git' does not exist
+Cannot checkout program version! at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101.
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Render_app-4: Checking out 28488381 to /home/azureuser/GiantRepair/LLM_Inference/tmp/grow FAIL
+Executed command: git clone /home/azureuser/GrowingBugRepository/project_repos/render-app.git /home/azureuser/GiantRepair/LLM_Inference/tmp/growingbugs/render_app/render_app_4_buggy 2>&1 && cd /home/azureuser/GiantRepair/LLM_Inference/tmp/growingbugs/render_app/render_app_4_buggy && git checkout 28488381e9438ffe8c568be215d68171d8fd29b3 2>&1
+fatal: repository '/home/azureuser/GrowingBugRepository/project_repos/render-app.git' does not exist
+Cannot checkout program version! at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101.
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+
+Checkout failed for Render_app-5: Checking out 9bfb808c to /home/azureuser/GiantRepair/LLM_Inference/tmp/grow FAIL
+Executed command: git clone /home/azureuser/GrowingBugRepository/project_repos/render-app.git /home/azureuser/GiantRepair/LLM_Inference/tmp/growingbugs/render_app/render_app_5_buggy 2>&1 && cd /home/azureuser/GiantRepair/LLM_Inference/tmp/growingbugs/render_app/render_app_5_buggy && git checkout 9bfb808c6aac5f0814aeb1f8ade9d99584ad24ad 2>&1
+fatal: repository '/home/azureuser/GrowingBugRepository/project_repos/render-app.git' does not exist
+Cannot checkout program version! at /home/azureuser/GrowingBugRepository/framework/bin/d4j/d4j-checkout line 101.
+Compilation failed in require at /home/azureuser/GrowingBugRepository/framework/bin/defects4j line 213.
+

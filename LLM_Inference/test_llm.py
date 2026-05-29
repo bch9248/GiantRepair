@@ -40,6 +40,9 @@ def generate_summary(rootpath, outcome):
         "pass_rate": round(pass_rate, 2)
     }
     
+    # Ensure outcome directory exists
+    os.makedirs(outcome, exist_ok=True)
+    
     # Write summary to JSON file
     summary_file = os.path.join(outcome, "summary.json")
     with open(summary_file, 'w') as f:
@@ -413,16 +416,23 @@ if __name__ == "__main__":
     parser.add_argument('--redo', action='store_true',
                         help='Redo testing for bugs that already have results')
     parser.add_argument('--mode', type=str, default='naive',
-                        choices=['naive', 'cot', 'react', 'pearl', 'sr', 'all'],
-                        help='Specific mode to test (naive, cot, react, pearl, sr), or "all" to test all modes')
+                        choices=['naive', 'cot', 'react', 'pearl', 'sr', 'srwoa', 'srwoi', 'usc', 'all'],
+                        help='Specific mode to test (naive, cot, react, pearl, sr, srwoa, srwoi, usc), or "all" to test all modes')
     args = parser.parse_args()
     
     if args.mode == 'all':
         # Test all modes
-        modes_to_test = ['naive', 'cot', 'react', 'pearl', 'sr']
+        modes_to_test = ['naive', 'cot', 'react', 'pearl', 'sr', 'srwoa', 'srwoi', 'usc']
         for mode in modes_to_test:
-            rootpath = args.rootpath.rstrip('/') + f'/{mode}/'
-            outcome = args.outcome.rstrip('/') + f'/{mode}/'
+            # Check if paths already include the mode (called from main.py)
+            # If rootpath already ends with a mode name, don't add it again
+            if args.rootpath.rstrip('/').endswith(mode):
+                rootpath = args.rootpath.rstrip('/') + '/'
+                outcome = args.outcome.rstrip('/') + '/'
+            else:
+                # Paths don't include mode, so add it
+                rootpath = args.rootpath.rstrip('/') + f'/{mode}/'
+                outcome = args.outcome.rstrip('/') + f'/{mode}/'
             
             # Check if this mode is already complete (skip if not using --redo)
             if not args.redo and os.path.exists(rootpath):
@@ -450,6 +460,11 @@ if __name__ == "__main__":
             test_all_patches(rootpath=rootpath, outcome=outcome, redo=args.redo)
     else:
         # Test specific mode
-        rootpath = args.rootpath.rstrip('/') + f'/{args.mode}/'
-        outcome = args.outcome.rstrip('/') + f'/{args.mode}/'
+        # Check if path already includes the mode
+        if args.rootpath.rstrip('/').endswith(args.mode):
+            rootpath = args.rootpath.rstrip('/') + '/'
+            outcome = args.outcome.rstrip('/') + '/'
+        else:
+            rootpath = args.rootpath.rstrip('/') + f'/{args.mode}/'
+            outcome = args.outcome.rstrip('/') + f'/{args.mode}/'
         test_all_patches(rootpath=rootpath, outcome=outcome, redo=args.redo)

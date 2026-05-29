@@ -1,2 +1,31 @@
 2024-04-23 10:58:16  Unrecognized option: -growing
 2024-04-23 10:58:29  Unrecognized option: -growing
+2026-02-06 14:31:50  Input format error : canvas_api_1
+2026-02-06 14:32:41  @JavaFile #readFileToString Illegal input file path : /home/azureuser/GiantRepair/GiantRepair/resources/d4j-info/src_path/canvasapi/1.txt
+2026-02-06 14:32:41  D4jSubject#setPath : path info error : <{0}>
+2026-02-06 14:32:41  Copy dir from /home/azureuser/GiantRepair/tmp/defects4j_buggy/canvasapi/canvasapi_1_buggynull to /home/azureuser/GiantRepair/tmp/defects4j_buggy/canvasapi/canvasapi_1_buggynull_bak failed
+java.io.FileNotFoundException: Source '/home/azureuser/GiantRepair/tmp/defects4j_buggy/canvasapi/canvasapi_1_buggynull' does not exist
+	at org.apache.commons.io.FileUtils.checkFileRequirements(FileUtils.java:1405)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:1368)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:1268)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:1237)
+	at mfix.common.util.Utils.copyDir(Utils.java:112)
+	at mfix.common.java.Subject.backup(Subject.java:230)
+	at mfix.common.java.Subject.backup(Subject.java:220)
+	at mfix.tools.Repair.repair(Repair.java:858)
+	at mfix.tools.Repair.repairAPI(Repair.java:1054)
+	at mfix.Main.main(Main.java:24)
+2026-02-06 14:32:41  Copy dir from /home/azureuser/GiantRepair/tmp/defects4j_buggy/canvasapi/canvasapi_1_buggynull to /home/azureuser/GiantRepair/tmp/defects4j_buggy/canvasapi/canvasapi_1_buggynull_bak failed
+java.io.FileNotFoundException: Source '/home/azureuser/GiantRepair/tmp/defects4j_buggy/canvasapi/canvasapi_1_buggynull' does not exist
+	at org.apache.commons.io.FileUtils.checkFileRequirements(FileUtils.java:1405)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:1368)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:1268)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:1237)
+	at mfix.common.util.Utils.copyDir(Utils.java:112)
+	at mfix.common.java.Subject.backup(Subject.java:230)
+	at mfix.common.java.Subject.backup(Subject.java:222)
+	at mfix.tools.Repair.repair(Repair.java:858)
+	at mfix.tools.Repair.repairAPI(Repair.java:1054)
+	at mfix.Main.main(Main.java:24)
+2026-02-06 14:32:41  Restore source file failed!
+2026-02-06 14:36:38  Input format error : canvas_api_1

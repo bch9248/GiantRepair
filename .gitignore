@@ -1,2 +1,23 @@
 .DS_Store
 combine_data.py
+results/
+LLM_Inference/tmp/
+
+# environment files
+LLM_Inference/.env
+*env/
+__pycache__/
+.venv/
+env/
+venv/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+*.sqlite
+*.db
+*.egg-info/
+dist/
+build/
+*.egg

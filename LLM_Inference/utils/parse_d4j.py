@@ -97,6 +97,7 @@ def clean_parse_d4j_expand(folder):
     return cleaned_result
 
 def clean_parse_d4j(folder):
+    """Load GrowingBugs dataset (57 bugs)"""
     with open(folder + "d4j-info/growing_bugs_single_function.json", "r") as f:
         result = json.load(f)
     cleaned_result = {}
@@ -113,6 +114,92 @@ def clean_parse_d4j(folder):
         cleaned_result[k + ".java"]["fix"] = "\n".join([line[leading_white_space:] for line in lines])
     # print(cleaned_result['JacksonDatabind-17.java']['buggy'])
     return cleaned_result
+
+def clean_parse_d4j_main(folder, version="all", use_enriched=False):
+    """Load main Defects4J dataset (483 bugs total)
+    
+    Args:
+        folder: Path to project root
+        version: 'v1.2' (251 bugs), 'v2.0' (232 bugs), or 'all' (483 bugs)
+        use_enriched: If True, load from single_function_repair_enriched.json with test metadata
+    """
+    json_file = "d4j-info/single_function_repair_enriched.json" if use_enriched else "d4j-info/single_function_repair.json"
+    with open(folder + json_file, "r") as f:
+        result = json.load(f)
+    cleaned_result = {}
+    
+    # Define project versions
+    v1_projects = ["Chart", "Closure", "Lang", "Math", "Time"]
+    v2_projects = ["Cli", "Codec", "Collections", "Compress", "Csv", "Gson", 
+                   "JacksonCore", "JacksonDatabind", "JacksonXml", "Jsoup", "JxPath", "Mockito"]
+    
+    for k, v in result.items():
+        project = k.split("-")[0]
+        
+        # Filter by version if specified
+        if version == "v1.2" and project not in v1_projects:
+            continue
+        elif version == "v2.0" and project not in v2_projects:
+            continue
+        
+        lines = v['buggy'].splitlines()
+        leading_white_space = len(lines[0]) - len(lines[0].lstrip())
+        bug_entry = {"buggy": "\n".join([line[leading_white_space:] for line in lines])}
+        lines = v['fix'].splitlines()
+        leading_white_space = len(lines[0]) - len(lines[0].lstrip())
+        bug_entry["fix"] = "\n".join([line[leading_white_space:] for line in lines])
+        
+        # Include enriched metadata if available
+        if use_enriched:
+            bug_entry["test_patch"] = v.get("test_patch")
+            bug_entry["relevant_tests"] = v.get("relevant_tests", [])
+            bug_entry["trigger_tests"] = v.get("trigger_tests", [])
+            bug_entry["bug_report_id"] = v.get("bug_report_id")
+            bug_entry["bug_report_url"] = v.get("bug_report_url")
+        
+        cleaned_result[k + ".java"] = bug_entry
+    
+    return cleaned_result
+
+
+def format_bug_info(bug_data):
+    """Format bug metadata into a readable string for prompts
+    
+    Args:
+        bug_data: Dictionary containing bug information with optional enriched fields
+    
+    Returns:
+        Formatted string with bug information
+    """
+    if not any(key in bug_data for key in ['trigger_tests', 'relevant_tests', 'bug_report_url', 'test_patch']):
+        return "No additional bug information available."
+    
+    info_parts = []
+    
+    # Add trigger tests (failing tests that expose the bug)
+    if bug_data.get('trigger_tests'):
+        trigger_list = bug_data['trigger_tests']
+        if len(trigger_list) > 5:
+            trigger_list = trigger_list[:5]
+            info_parts.append(f"Trigger Tests (failing tests): {', '.join(trigger_list)} ... ({len(bug_data['trigger_tests'])} total)")
+        else:
+            info_parts.append(f"Trigger Tests (failing tests): {', '.join(trigger_list)}")
+    
+    # Add relevant tests count
+    if bug_data.get('relevant_tests'):
+        info_parts.append(f"Total Relevant Tests: {len(bug_data['relevant_tests'])}")
+    
+    # Add bug report link
+    if bug_data.get('bug_report_url') and bug_data['bug_report_url']:
+        info_parts.append(f"Bug Report: {bug_data['bug_report_url']}")
+    
+    # Add test patch summary if available
+    if bug_data.get('test_patch'):
+        test_lines = bug_data['test_patch'].count('\n')
+        info_parts.append(f"Test Patch Available: Yes ({test_lines} lines)")
+    
+    return "\n".join(info_parts) if info_parts else "No additional bug information available."
+
 
 def clean_parse_d4j_topN(folder):
     with open(folder + "d4j-info/top_n_function.json", "r") as f:
